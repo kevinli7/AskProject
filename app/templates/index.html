@@ -4,5 +4,8 @@
   </head>
   <body>
     <h1>Hello, {{ user.nickname }} </h1>
+    {% for post in posts %}
+    <div><p><b>{{ post.author.nickname }} says: </b>{{ post.body }}</p></div>
+    {% endfor %}
   </body>
 </html>
