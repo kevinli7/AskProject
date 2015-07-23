@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect
 from app import app
-from .forms import LoginForm
+from .forms import LoginForm, RegisterForm
 
 @app.route('/')
 @app.route('/index')
@@ -25,10 +25,20 @@ def index():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        flash('Login requested for OpenID="%s", remember_me=%s' %
-              (form.openid.data, str(form.remember_me.data)))
+        flash('Login requested for email="%s", remember_me=%s' %
+              (form.email.data, str(form.remember_me.data)))
         return redirect('/index')
     return render_template('login.html',
                             title='Sign In',
-                            form=form,
-                            providers=app.config['OPENID_PROVIDERS'])
+                            form=form)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegisterForm()
+    if form.validate_on_submit():
+        flash('New User: user="%s", email=%s' %
+              (form.name.data, form.email.data))
+        return redirect('/index')
+    return render_template('register.html',
+                            title='Register for DOGEWORLD',
+                            form=form)
