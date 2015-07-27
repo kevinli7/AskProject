@@ -1,33 +1,44 @@
-from flask import render_template, flash, redirect
-from app import app
+from flask import render_template, flash, redirect, session, url_for, request, g
+from flask.ext.login import login_user, logout_user,current_user, login_required
+from app import app, db, lm
+from .models import User
 from .forms import LoginForm, RegisterForm
+from werkzeug import check_password_hash, generate_password_hash
+
 
 @app.route('/')
 @app.route('/index')
 def index():
     user = {'nickname' : "DOGE"}
     posts = [
-        {
-            'author': {'nickname': "DogeLuvr69"},
-        'body': 'So many DOGES in the house!!'
-    },
-    {
-        'author': {'nickname': 'Doge Enthusiast'},
-        'body': 'WHO LET THE DOGES OUT'
-    }
+    #     {
+    #         'author': {'nickname': "DogeLuvr69"},
+    #     'body': 'So many DOGES in the house!!'
+    # },
+    # {
+    #     'author': {'nickname': 'Doge Enthusiast'},
+    #     'body': 'WHO LET THE DOGES OUT'
+    # }
     ]
-    return render_template('index.html',
-                            title='DOGELAND', 
+    return render_template('index.html', 
+                title='DOGELAND',
                 user=user,
                 posts=posts)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    # if g.user is not None and g.user.is_authenitcated():
+    #     return redirect(url_for('index'))
+    
     form = LoginForm()
     if form.validate_on_submit():
-        flash('Login requested for email="%s", remember_me=%s' %
-              (form.email.data, str(form.remember_me.data)))
-        return redirect('/index')
+        user = User.query.filter_by(email=form.email.data).first()
+        if user and check_password_hash(user.password, form.password.data):
+            session['user_id'] = user.id
+            flash('Welcome %s' % user.name)
+            session['remember_me'] = form.remember_me.data
+            return redirect(url_for('index'))
+        flash('Wrong email or password', 'error-message')
     return render_template('login.html',
                             title='Sign In',
                             form=form)
@@ -36,9 +47,20 @@ def login():
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
-        flash('New User: user="%s", email=%s' %
-              (form.name.data, form.email.data))
-        return redirect('/index')
+        user = User(name=form.name.data, email=form.email.data, 
+            password=generate_password_hash(form.password.data))
+        db.session.add(user)
+        db.session.commit()
+
+        session['user_id'] = user.id
+        flash('Thanks for registering')
+        return redirect(url_for('index'))
     return render_template('register.html',
                             title='Register for DOGEWORLD',
                             form=form)
+
+
+""" HELPER FUNCTIONS """
+@lm.user_loader
+def load_user(id):
+   return User.query.get(int(id))
