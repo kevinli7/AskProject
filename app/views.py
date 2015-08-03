@@ -8,8 +8,9 @@ from werkzeug import check_password_hash, generate_password_hash
 
 @app.route('/')
 @app.route('/index')
+@login_required
 def index():
-    user = {'nickname' : "DOGE"}
+    user = g.user
     posts = [
     #     {
     #         'author': {'nickname': "DogeLuvr69"},
@@ -27,8 +28,9 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    # if g.user is not None and g.user.is_authenitcated():
-    #     return redirect(url_for('index'))
+    #Checks if a user is logged in already
+    if g.user is not None and g.user.is_authenticated():
+        return redirect(url_for('index'))
     
     form = LoginForm()
     if form.validate_on_submit():
@@ -37,11 +39,16 @@ def login():
             session['user_id'] = user.id
             flash('Welcome %s' % user.name)
             session['remember_me'] = form.remember_me.data
-            return redirect(url_for('index'))
+            return redirect(request.args.get('next') or url_for('index'))
         flash('Wrong email or password', 'error-message')
     return render_template('login.html',
                             title='Sign In',
                             form=form)
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -64,3 +71,7 @@ def register():
 @lm.user_loader
 def load_user(id):
    return User.query.get(int(id))
+
+@app.before_request
+def before_request():
+    g.user = current_user

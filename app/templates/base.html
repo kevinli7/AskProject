@@ -7,9 +7,14 @@
     {% endif %}
   </head>
   <body>
-    <div> DOGEWORLD <a href="/index">Home</a>
-      <a href="/login">Login</a>
-      <a href="/register">Register</a>
+    <div> DOGEWORLD 
+      <a href="/index">Home</a>
+      {% if g.user.is_authenticated %}
+      |  <a href="{{ url_for('logout') }}">Logout</a>
+      {% else %}
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      {% endif %}
     </div>
     <hr>
     {% with messages = get_flashed_messages() %}

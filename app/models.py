@@ -17,6 +17,9 @@ class User(db.Model):
 		self.email = email
 		self.password = password
 
+	def is_authenticated(self):
+		return True
+
 	def getStatus(self):
 		return USER.STATUS[self.status]
 
