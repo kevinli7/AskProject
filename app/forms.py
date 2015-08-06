@@ -1,6 +1,6 @@
 from flask.ext.wtf import Form, RecaptchaField
-from wtforms import StringField, BooleanField, TextField, PasswordField
-from wtforms.validators import DataRequired, EqualTo, Email, Required
+from wtforms import StringField, BooleanField, TextField, PasswordField, TextAreaField
+from wtforms.validators import DataRequired, EqualTo, Email, Required, Length
 
 class LoginForm(Form):
     email = StringField('Email address', validators=[DataRequired(), Email()])
@@ -17,3 +17,6 @@ class RegisterForm(Form):
 		])
 	# accept_tos = BooleanField('I accept the TOS', [Required()])
 	# recaptcha = RecaptchaField()
+
+class EditForm(Form):
+	about_me = TextAreaField('about_me', validators=[Length(min=0, max=140)])

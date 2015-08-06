@@ -2,29 +2,43 @@ from flask import render_template, flash, redirect, session, url_for, request, g
 from flask.ext.login import login_user, logout_user,current_user, login_required
 from app import app, db, lm
 from .models import User
-from .forms import LoginForm, RegisterForm
+from .forms import LoginForm, RegisterForm, EditForm
+from datetime import datetime
 from werkzeug import check_password_hash, generate_password_hash
 
 
 @app.route('/')
 @app.route('/index')
-@login_required
+# @login_required
 def index():
     user = g.user
-    posts = [
-    #     {
-    #         'author': {'nickname': "DogeLuvr69"},
-    #     'body': 'So many DOGES in the house!!'
-    # },
-    # {
-    #     'author': {'nickname': 'Doge Enthusiast'},
-    #     'body': 'WHO LET THE DOGES OUT'
-    # }
-    ]
     return render_template('index.html', 
                 title='DOGELAND',
-                user=user,
-                posts=posts)
+                user=user)
+
+@app.route('/user/<name>')
+@login_required
+def user(name):
+    user = User.query.filter_by(name=name).first()
+    if not user:
+        flash('User %s not found.' % name)
+        return redirect(url_for('index'))
+    return render_template('user.html',
+                            user=user)
+@app.route('/edit', methods=['GET', 'POST'])
+@login_required
+def edit():
+    form = EditForm()
+    if form.validate_on_submit():
+        g.user.about_me = form.about_me.data
+        db.session.add(g.user)
+        db.session.commit()
+        flash('Your changes have been saved.')
+        return redirect(url_for('user', name=g.user.name))
+    else:
+        form.about_me.data = g.user.about_me
+    return render_template('edit.html', form=form)
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -75,3 +89,7 @@ def load_user(id):
 @app.before_request
 def before_request():
     g.user = current_user
+    if g.user.is_authenticated():
+        g.user.last_seen = datetime.utcnow()
+        db.session.add(g.user)
+        db.session.commit()
