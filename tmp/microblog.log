@@ -1,0 +1,249 @@
+2015-08-10 21:49:37,543 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-10 21:49:53,327 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 70, in register
+    if form.validate_on_submit():
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask_wtf\form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "c:\Users\Kevin\AskProject\app\forms.py", line 23, in validate
+    if User.query.filter_by(email=form.email.data).first():
+NameError: name 'User' is not defined
+2015-08-10 21:50:03,536 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 70, in register
+    if form.validate_on_submit():
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask_wtf\form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "c:\Users\Kevin\AskProject\app\forms.py", line 23, in validate
+    if User.query.filter_by(email=form.email.data).first():
+NameError: name 'User' is not defined
+2015-08-10 21:51:02,490 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 70, in register
+    if form.validate_on_submit():
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask_wtf\form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "c:\Users\Kevin\AskProject\app\forms.py", line 23, in validate
+    if not Form.validate(self):
+NameError: name 'User' is not defined
+2015-08-10 21:52:35,038 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 70, in register
+    if form.validate_on_submit():
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask_wtf\form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "c:\Users\Kevin\AskProject\app\forms.py", line 23, in validate
+    if not Form.validate(self):
+NameError: name 'User' is not defined
+2015-08-10 21:54:22,506 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 70, in register
+    if form.validate_on_submit():
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask_wtf\form.py", line 166, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "c:\Users\Kevin\AskProject\app\forms.py", line 23, in validate
+    def validate(self):
+NameError: name 'User' is not defined
+2015-08-10 21:56:26,879 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-10 21:57:02,610 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-10 21:57:29,420 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\default.py", line 450, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: users_user.name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 74, in register
+    db.session.commit()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\scoping.py", line 150, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 790, in commit
+    self.transaction.commit()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 392, in commit
+    self._prepare_impl()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 372, in _prepare_impl
+    self.session.flush()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 2004, in flush
+    self._flush(objects)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 2122, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\util\langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\util\compat.py", line 182, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 2086, in _flush
+    flush_context.execute()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 373, in execute
+    rec.execute(self)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 532, in execute
+    uow
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\persistence.py", line 174, in save_obj
+    mapper, table, insert)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\persistence.py", line 779, in _emit_insert_statements
+    execute(statement, params)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 914, in execute
+    return meth(self, multiparams, params)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1010, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1146, in _execute_context
+    context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1341, in _handle_dbapi_exception
+    exc_info
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\util\compat.py", line 188, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=exc_value)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\util\compat.py", line 181, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\default.py", line 450, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users_user.name [SQL: 'INSERT INTO users_user (name, email, password, registration_date, role, status, about_me, last_seen) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: ('doge3', 'dope@doge.com', 'pbkdf2:sha1:1000$AVqB8bDZ$c0f032855c13620a542bf8dea36daef73b04c1f2', None, 2, 1, None, None)]
+2015-08-10 21:58:14,156 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\default.py", line 450, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: users_user.name
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 74, in register
+    db.session.commit()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\scoping.py", line 150, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 790, in commit
+    self.transaction.commit()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 392, in commit
+    self._prepare_impl()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 372, in _prepare_impl
+    self.session.flush()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 2004, in flush
+    self._flush(objects)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 2122, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\util\langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\util\compat.py", line 182, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\session.py", line 2086, in _flush
+    flush_context.execute()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 373, in execute
+    rec.execute(self)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 532, in execute
+    uow
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\persistence.py", line 174, in save_obj
+    mapper, table, insert)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\orm\persistence.py", line 779, in _emit_insert_statements
+    execute(statement, params)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 914, in execute
+    return meth(self, multiparams, params)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\sql\elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1010, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1146, in _execute_context
+    context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1341, in _handle_dbapi_exception
+    exc_info
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\util\compat.py", line 188, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=exc_value)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\util\compat.py", line 181, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\sqlalchemy\engine\default.py", line 450, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users_user.name [SQL: 'INSERT INTO users_user (name, email, password, registration_date, role, status, about_me, last_seen) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: ('doge3', 'dope@doge.com', 'pbkdf2:sha1:1000$9U5br8En$2f31fb3a10bb7f1929ba5c796f565fe2dcc06bed', None, 2, 1, None, None)]
+2015-08-10 22:00:27,865 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
