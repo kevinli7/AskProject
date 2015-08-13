@@ -14,7 +14,7 @@ class User(db.Model):
     registration_date = db.Column(db.DateTime)
 
     # posts = db.relationship('Post', backref='author', lazy='dynamic')
-    role = db.Column(db.SmallInteger, default = USER.USER)
+    role = db.Column(db.SmallInteger, default=USER.STUDENT)
     status = db.Column(db.SmallInteger, default=USER.NEW)
 
     about_me = db.Column(db.String(140))

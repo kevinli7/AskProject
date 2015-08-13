@@ -5,6 +5,7 @@ from .models import User
 from .forms import LoginForm, RegisterForm, EditForm
 from datetime import datetime
 from werkzeug import check_password_hash, generate_password_hash
+from app import constants as CONST
 
 
 @app.route('/')
@@ -70,6 +71,10 @@ def register():
     if form.validate_on_submit():
         user = User(name=form.name.data, email=form.email.data, 
             password=generate_password_hash(form.password.data))
+        role = form.isStudent.data
+        if (role == CONST.ROLE[CONST.SURVEYOR]):
+            user.role = CONST.SURVEYOR
+
         db.session.add(user)
         db.session.commit()
 
@@ -80,6 +85,9 @@ def register():
                             title='Register for DOGEWORLD',
                             form=form)
 
+@app.route('/create')
+def create():
+    render_template('create.html')
 
 """ HELPER FUNCTIONS """
 @lm.user_loader

@@ -247,3 +247,948 @@ Traceback (most recent call last):
     cursor.execute(statement, parameters)
 sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users_user.name [SQL: 'INSERT INTO users_user (name, email, password, registration_date, role, status, about_me, last_seen) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: ('doge3', 'dope@doge.com', 'pbkdf2:sha1:1000$9U5br8En$2f31fb3a10bb7f1929ba5c796f565fe2dcc06bed', None, 2, 1, None, None)]
 2015-08-10 22:00:27,865 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-11 17:58:30,869 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-11 18:07:11,421 ERROR: Exception on /register [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 81, in register
+    return render_template('register.html',
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 2, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% block content %}{% endblock %}
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 21, in <module>
+    {{ form.surveyor() }}<br>
+jinja2.exceptions.UndefinedError: 'app.forms.RegisterForm object' has no attribute 'surveyor'
+2015-08-11 18:08:09,721 ERROR: Exception on /register [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 81, in register
+    return render_template('register.html',
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 2, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% block content %}{% endblock %}
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 21, in <module>
+    {{ form.surveyor() }}<br>
+jinja2.exceptions.UndefinedError: 'app.forms.RegisterForm object' has no attribute 'surveyor'
+2015-08-11 18:08:13,587 ERROR: Exception on /register [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 81, in register
+    return render_template('register.html',
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 2, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% block content %}{% endblock %}
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 21, in <module>
+    {{ form.surveyor() }}<br>
+jinja2.exceptions.UndefinedError: 'app.forms.RegisterForm object' has no attribute 'surveyor'
+2015-08-11 18:10:47,398 ERROR: Exception on /register [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 81, in register
+    return render_template('register.html',
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 2, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% block content %}{% endblock %}
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 21, in <module>
+    {{ form.isStudent() }}<br>
+jinja2.exceptions.UndefinedError: 'app.forms.RegisterForm object' has no attribute 'isStudent'
+2015-08-11 18:10:49,481 ERROR: Exception on /register [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 81, in register
+    return render_template('register.html',
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 2, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% block content %}{% endblock %}
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 21, in <module>
+    {{ form.isStudent() }}<br>
+jinja2.exceptions.UndefinedError: 'app.forms.RegisterForm object' has no attribute 'isStudent'
+2015-08-11 18:12:44,083 ERROR: Exception on /register [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 81, in register
+    return render_template('register.html',
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 2, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% block content %}{% endblock %}
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 21, in <module>
+    {{ form.isStudent() }}<br>
+jinja2.exceptions.UndefinedError: 'app.forms.RegisterForm object' has no attribute 'isStudent'
+2015-08-11 18:12:46,471 ERROR: Exception on /register [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 81, in register
+    return render_template('register.html',
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 2, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% block content %}{% endblock %}
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 21, in <module>
+    {{ form.isStudent() }}<br>
+jinja2.exceptions.UndefinedError: 'app.forms.RegisterForm object' has no attribute 'isStudent'
+2015-08-11 18:14:51,555 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-11 18:14:56,535 ERROR: Exception on /register [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 83, in register
+    form=form)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 2, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% block content %}{% endblock %}
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 22, in <module>
+    {% for error in form.surveyor.errors %}
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.RegisterForm object' has no attribute 'surveyor'
+2015-08-11 18:15:02,669 ERROR: Exception on /register [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 83, in register
+    form=form)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 2, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% block content %}{% endblock %}
+  File "c:\Users\Kevin\AskProject\app\templates\register.html", line 22, in <module>
+    {% for error in form.surveyor.errors %}
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'app.forms.RegisterForm object' has no attribute 'surveyor'
+2015-08-11 18:23:07,624 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 17, in index
+    title='DOGELAND',
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 19, in <module>
+    {% if g.user.role == USER.SURVEYOR %}
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'USER' is undefined
+2015-08-11 18:23:16,127 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 17, in index
+    title='DOGELAND',
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 19, in <module>
+    {% if g.user.role == USER.SURVEYOR %}
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'USER' is undefined
+2015-08-11 18:23:51,967 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-11 18:25:07,791 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-11 18:27:28,241 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-11 18:27:43,431 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 75, in register
+    if (role == USER.USER[USER.SURVEYOR]):
+AttributeError: 'module' object has no attribute 'USER'
+2015-08-11 18:29:39,081 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 75, in register
+    if (role == USER.ROLE[USER.SURVEYOR]):
+AttributeError: 'module' object has no attribute 'USER'
+2015-08-11 18:29:48,845 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 75, in register
+    if (role == USER.ROLE[USER.SURVEYOR]):
+AttributeError: 'module' object has no attribute 'USER'
+2015-08-11 18:30:49,732 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 75, in register
+    if (role == CONST.ROLE[CONST.SURVEYOR]):
+AttributeError: 'module' object has no attribute 'USER'
+2015-08-11 18:30:57,827 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 75, in register
+    if (role == CONST.ROLE[CONST.SURVEYOR]):
+AttributeError: 'module' object has no attribute 'USER'
+2015-08-11 18:34:10,555 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 75, in register
+    if (role == CONST.ROLE[CONST.SURVEYOR]):
+AttributeError: 'module' object has no attribute 'USER'
+2015-08-11 18:34:49,443 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 75, in register
+    if (role == CONST.ROLE[CONST.SURVEYOR]):
+AttributeError: 'module' object has no attribute 'USER'
+2015-08-11 18:35:20,801 ERROR: Exception on /register [POST] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 75, in register
+    if (role == 'surveyor'):
+AttributeError: 'module' object has no attribute 'USER'
+2015-08-12 20:11:15,070 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-12 20:14:40,616 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 18, in index
+    user=user)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% if g.user.getRole() == "surveyor" %}
+jinja2.exceptions.UndefinedError: 'werkzeug.local.LocalProxy object' has no attribute 'getRole'
+2015-08-12 20:14:55,896 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 18, in index
+    user=user)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% if g.user.getRole() == "surveyor" %}
+jinja2.exceptions.UndefinedError: 'werkzeug.local.LocalProxy object' has no attribute 'getRole'
+2015-08-12 20:14:59,260 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 18, in index
+    user=user)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% if g.user.getRole() == "surveyor" %}
+jinja2.exceptions.UndefinedError: 'werkzeug.local.LocalProxy object' has no attribute 'getRole'
+2015-08-12 20:15:11,340 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 18, in index
+    user=user)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% if g.user && g.user.getRole() == "surveyor" %}
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 966, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% if g.user && g.user.getRole() == "surveyor" %}
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 459, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 893, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 875, in subparse
+    rv = self.parse_statement()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 122, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 199, in parse_if
+    node.test = self.parse_tuple(with_condexpr=False)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 612, in parse_tuple
+    args.append(parse())
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 604, in <lambda>
+    parse = lambda: self.parse_expression(with_condexpr=False)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 387, in parse_expression
+    return self.parse_or()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 404, in parse_or
+    left = self.parse_and()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 413, in parse_and
+    left = self.parse_not()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 424, in parse_not
+    return self.parse_compare()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 428, in parse_compare
+    expr = self.parse_add()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 450, in parse_add
+    left = self.parse_sub()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 460, in parse_sub
+    left = self.parse_concat()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 470, in parse_concat
+    args = [self.parse_mul()]
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 480, in parse_mul
+    left = self.parse_div()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 490, in parse_div
+    left = self.parse_floordiv()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 500, in parse_floordiv
+    left = self.parse_mod()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 510, in parse_mod
+    left = self.parse_pow()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 520, in parse_pow
+    left = self.parse_unary()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 539, in parse_unary
+    node = self.parse_postfix(node)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 664, in parse_postfix
+    node = self.parse_subscript(node)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\parser.py", line 692, in parse_subscript
+    next(self.stream)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\lexer.py", line 349, in __next__
+    self.current = next(self._iter)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\lexer.py", line 552, in wrap
+    for lineno, token, value in stream:
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\lexer.py", line 733, in tokeniter
+    name, filename)
+jinja2.exceptions.TemplateSyntaxError: unexpected char '&' at 994
+2015-08-12 20:15:19,525 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 18, in index
+    user=user)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% if g.user and g.user.getRole() == "surveyor" %}
+jinja2.exceptions.UndefinedError: 'werkzeug.local.LocalProxy object' has no attribute 'getRole'
+2015-08-12 20:15:20,251 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 18, in index
+    user=user)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 30, in <module>
+    {% if g.user and g.user.getRole() == "surveyor" %}
+jinja2.exceptions.UndefinedError: 'werkzeug.local.LocalProxy object' has no attribute 'getRole'
+2015-08-12 20:20:03,892 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-12 20:21:46,988 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-12 20:21:53,595 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-12 20:24:57,138 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-12 20:25:04,039 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-12 20:25:24,731 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 18, in index
+    user=user)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 28, in <module>
+    |  <a href="{{ url_for('create') }}">Create Survey</a>
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\helpers.py", line 305, in url_for
+    force_external=external)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\werkzeug\routing.py", line 1678, in build
+    raise BuildError(endpoint, values, method)
+werkzeug.routing.BuildError: ('create', {}, None)
+2015-08-12 20:26:34,218 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 18, in index
+    user=user)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 28, in <module>
+    |  <a href="{{ url_for('create') }}">Create Survey</a>
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\helpers.py", line 305, in url_for
+    force_external=external)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\werkzeug\routing.py", line 1678, in build
+    raise BuildError(endpoint, values, method)
+werkzeug.routing.BuildError: ('create', {}, None)
+2015-08-12 20:26:34,983 ERROR: Exception on /index [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 18, in index
+    user=user)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\index.html", line 1, in <module>
+    {% extends "base.html" %}
+  File "c:\Users\Kevin\AskProject\app\templates\base.html", line 28, in <module>
+    |  <a href="{{ url_for('create') }}">Create Survey</a>
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\helpers.py", line 305, in url_for
+    force_external=external)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\werkzeug\routing.py", line 1678, in build
+    raise BuildError(endpoint, values, method)
+werkzeug.routing.BuildError: ('create', {}, None)
+2015-08-12 20:26:37,776 INFO: askproject [in c:\Users\Kevin\AskProject\app\__init__.py:23]
+2015-08-12 20:26:41,872 ERROR: Exception on /create [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 91, in create
+    render_template('create.html')
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\create.html", line 1, in <module>
+    {% extends base.html %}
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'base' is undefined
+2015-08-12 20:27:03,895 ERROR: Exception on /create [GET] [in c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py:1423]
+Traceback (most recent call last):
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\Kevin\AskProject\app\views.py", line 91, in create
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 128, in render_template
+    context, ctx.app)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 969, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 742, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\_compat.py", line 36, in reraise
+    raise value.with_traceback(tb)
+  File "c:\Users\Kevin\AskProject\app\templates\create.html", line 1, in <module>
+    {% extends base.html %}
+  File "c:\Users\Kevin\AskProject\flask\lib\site-packages\jinja2\environment.py", line 397, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'base' is undefined

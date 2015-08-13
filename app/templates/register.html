@@ -17,6 +17,12 @@
       <span style="color: red;">[{{ error }}]</span>
     {% endfor %}<br>
 
+    Surveyor or Student:<br>
+    {{ form.isStudent }}<br>
+    {% for error in form.isStudent.errors %}
+      <span style="color: red;">[{{ error }}]</span>
+    {% endfor %}<br>
+
     Password:<br>
     {{ form.password(size=80) }}<br>
     {% for error in form.password.errors %}
